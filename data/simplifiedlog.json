@@ -1,0 +1,25 @@
+[
+
+
+
+		{"Time":0,"Action":"Model Loaded","Symbol":"L","Init Val":null,"End Val":null},
+		{"Time":15,"Action":"setup pressed","Symbol":"S","Init Val":null,"End Val":null},
+		{"Time":20,"Action":"go/pause pressed","Symbol":"G","Init Val":null,"End Val":null},
+		{"Time":28,"Action":"go/pause released","Symbol":"R","Init Val":null,"End Val":null},
+		{"Time":29,"Action":"setup pressed","Symbol":"S","Init Val":null,"End Val":null},
+		{"Time":44,"Action":"go/pause pressed","Symbol":"G","Init Val":null,"End Val":null},
+		{"Time":78,"Action":"go/pause released","Symbol":"R","Init Val":null,"End Val":null},
+		{"Time":92,"Action":"FOOD-RIGHT-BUGS-EAT","Symbol":"E","Init Val":4.1,"End Val":3.6},
+		{"Time":95,"Action":"setup pressed","Symbol":"S","Init Val":null,"End Val":null},
+		{"Time":95,"Action":"go/pause pressed","Symbol":"G","Init Val":null,"End Val":null},
+		{"Time":129,"Action":"go/pause released","Symbol":"R","Init Val":null,"End Val":null},
+		{"Time":132,"Action":"setup pressed","Symbol":"S","Init Val":null,"End Val":null},
+		{"Time":133,"Action":"go/pause pressed","Symbol":"G","Init Val":null,"End Val":null},
+		{"Time":139,"Action":"add more bugs pressed","Symbol":"A","Init Val":null,"End Val":null},
+		{"Time":141,"Action":"add more bugs pressed","Symbol":"A","Init Val":null,"End Val":null},
+		{"Time":150,"Action":"go/pause released","Symbol":"R","Init Val":null,"End Val":null},
+		{"Time":150,"Action":"setup pressed","Symbol":"S","Init Val":null,"End Val":null},
+		{"Time":160,"Action":"go/pause pressed","Symbol":"G","Init Val":null,"End Val":null},
+		{"Time":173,"Action":"add more bugs pressed","Symbol":"A","Init Val":null,"End Val":null}
+	
+]

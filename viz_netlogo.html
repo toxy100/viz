@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<style>
+.L {
+	stroke: #E41A1C;
+	fill: #E41A1C;
+	background-color: #7FC97F;
+}
+.S {
+	stroke: #377EB8;
+	fill: #377EB8;
+	background-color: #BEAED4;
+}
+.G {
+	stroke: #4DAF4A;
+	fill: #4DAF4A;
+	background-color: #FDC086;
+}
+.R {
+	stroke: #984EA3;
+	fill: #984EA3;
+	background-color: #FFFF99;
+}
+.E {
+	stroke: #FF7F00;
+	fill: #FF7F00;
+	background-color: #386CB0;
+}
+.A {
+	stroke: #A65628;
+	fill: #A65628;
+	background-color: #F0027F;
+}
+g text{
+    color: white;
+}
+/*
+Colors from colorbrewer2.org
+9 classes qualitative
+RESERVED COLORS:
+#FFFF33
+#F781BF
+#999999
+*/
+
+	</style>
+	<script src="d3.js"></script>
+	<script>
+	function draw(data) {
+		"use strict";
+
+		var margin = 50,
+			width = 1024,
+			height = 300;
+
+
+		d3.select("body")
+			.append("svg")
+				.attr("width",width)
+				.attr("height",height)
+			
+
+	var x_extent = d3.extent(data, function(d){return d.Time});
+	var x_scale = d3.scale.linear()
+		.range([margin, width - margin])
+		.domain(x_extent);
+
+	var x_axis = d3.svg.axis().scale(x_scale);
+	d3.select("svg")
+		.append("g")
+			.attr("class","x axis")
+			.attr("transform", "translate(0, " + (height-margin) + ")")
+		.call(x_axis)
+
+	d3.select("svg")
+		.append("g")
+			.selectAll("circle")
+			.attr("id","dotline")
+			.data(data)
+			.enter()
+			.append("circle")
+
+var g = d3.select("#dotline")
+		g.append("text")
+			.text(function (d){return d.Symbol})
+			.attr("x", function (d){return x_scale(d.Time)})
+			.attr("y", 245)
+			.attr("dy", "0.35em")
+					.attr("class","linelabel")
+					.attr("text-anchor","middle")
+					.style("fill","white")
+
+	d3.selectAll("circle")
+		.attr("cx", function (d){return x_scale(d.Time)})
+		.attr("cy", 245);
+
+
+
+
+	d3.selectAll("circle")
+		.attr("r", 9)
+		.attr("class",function (d){return d.Symbol})
+
+
+
+
+		/*
+			.append("div")
+			.selectAll("div")
+			.data(data)
+			.enter()
+			.append("div")
+			.text(function (d) {
+				return d.Time + ": " + d.Action;
+			});*/
+	}	
+	</script>
+</head>
+
+<body>
+<script>
+d3.json("data/simplifiedlog.json", draw);
+</script>
+<p>some test texts</p>
+</body>
+</html>
